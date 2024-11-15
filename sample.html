@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to full width for first row */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+.full-width {
+  grid-column: 1 / -1; /* Span full width for the first row */
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.narrow-column {
+  grid-column: span 1; /* Narrower column */
+  width: 30%; /* Adjust width to make it narrow */
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.wide-column {
+  grid-column: span 1; /* Wider column */
+  width: 70%; /* Takes the rest of the space */
+  background-color: lightcoral;
+  padding: 10px;
+}
+.container {
+  display: grid;
+  grid-template-rows: auto auto; /* Defines two rows */
+  grid-template-columns: 1fr 1fr; /* Defines two equal columns */
+  gap: 10px; /* Adjusts the spacing between items */
+  width: 100%;
+}
+
+.top-item {
+    background-color: red;
+  grid-column: 1 / -1; /* Spans the full width of the container */
+}
+
+.bottom-left-item {
+    background-color: green;
+  grid-column: 1; /* Left column in the second row */
+}
+
+.bottom-right-item {
+  grid-column: 2; /* Right column in the second row */
+  background-color: blue;
+
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="full-width">First row (full width)</div>
+        <div class="narrow-column">Second row, first column (narrow)</div>
+        <div class="wide-column">Second row, second column (wide)</div>
+      </div>
+
+      <div class="container">
+        <div class="top-item">Top Item: Full Width</div>
+        <div class="bottom-left-item">Bottom Left Item</div>
+        <div class="bottom-right-item">Bottom Right Item</div>
+      </div>
+      
+      
+</body>
+</html>

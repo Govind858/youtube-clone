@@ -1,0 +1,374 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    background-color:white;
+    align-items: center;
+    flex-wrap: wrap;
+
+} 
+
+/* .header > div{
+    width: auto;
+    margin: 10px;
+} */
+
+#logo{
+    width: 100px;
+    height:30px;
+    object-fit: cover;
+}
+
+
+*{
+   
+    margin: 0;
+    padding: 0;
+}
+
+.search{
+    display: flex;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    width: 450px;
+    border-color: black;
+    padding-left: 10px; 
+    border:1px solid black;
+    border-radius: 35px;
+}
+
+ .search form{
+
+    display: flex;
+    align-items: center;
+    width: 90%;
+   
+ }
+.text-field{
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 34px;
+    border: 3px;
+ 
+}
+
+.three-menu{
+    display:flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    gap: 10px;
+    padding-left: 10px;
+    margin: 10px;
+}
+
+
+.white-space{
+    width: 366px;
+}
+.white-space2{
+    width: 373px;
+
+}
+
+.create{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+#create{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.profile{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+#profile{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.microphone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 50%;
+    background-color: white;
+}
+.fa-solid fa-magnifying-glass{
+    padding: 20px;
+}
+
+
+.magni{
+    padding: 10px;
+}
+
+.side-bar{
+    float: left;
+    overflow-y: auto;
+    scrollbar-width: thin;
+   /* margin-top: 30px;*/
+    display: flex;
+    width: 204px;
+    margin-left: 10px;
+    height: 100vh;
+    /* background-color: rgb(117, 117, 117); */
+    flex-direction: column;
+    
+}
+
+.side-bar div{
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+    height: 40px;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    /* border-radius: 7px; */
+
+}
+.side-bar div:hover{
+    background-color: rgb(246, 244, 244);
+    border-radius: 7px;
+    cursor: pointer;
+}
+P{
+    font-family: sans-serif;
+}
+
+#icon-img{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+#line{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#sub-icon{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#settings{
+ font-family: sans-serif;
+ font-weight: lighter;
+ font-size: 15px;
+}
+
+#copyright{
+    margin-left: 5px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    font-size:14px;
+    opacity: 0.5;
+    font-weight: bold;
+    
+}
+#font{
+    font-size: 11px;
+    opacity: 0.3;
+    
+}
+
+.horizontal-scrollbar{
+    margin-left: 22px;
+    display: flex;
+    width: 1255px;
+    height: 56px;
+    background-color: rgb(255, 255, 255);
+    float: left;
+    gap: 10px;
+    align-items: center;
+    overflow-x: scroll;
+}
+.horizontal-scrollbar div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    width: 204px;
+   background-color: rgb(200, 200, 200);
+   border-radius: 4px;
+   padding: 4px;
+ 
+}
+
+ .horizontal-scrollbar::-webkit-scrollbar{
+    display: none;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50px;
+    height: 56px;
+    background-color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+button:hover{
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.horizontal-scrollbar div p {
+    white-space: nowrap; /* Prevents line breaks */
+    overflow: hidden; /* Ensures overflow does not wrap */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text overflows */
+    margin: 0; /* Removes default margin around the <p> element */
+    padding: 0; /* Removes padding */
+}
+.horizontal-scrollbar p{
+    font-size: 15px;
+    font-weight: 200;
+    font-family: Roboto, Arial, sans-serif;
+};
+
+.side-bar, .horizontal-scrollbar {
+    float: left;
+    overflow: hidden; /* Helps contain floats within these elements */
+    width: 100%;
+}
+
+.new {
+    display: grid;
+    grid-template-columns: repeat(3, 399.71px);
+    grid-template-rows: repeat(2, 364.84px);
+    gap: 10px;
+   /* display: flex;*/
+    height: 800px;
+    width: 1300px;
+    background-color: rgb(255, 255, 255);
+    clear: both; /* Ensures it appears below the floated elements */
+    position: absolute; /* Ensures it sits on the normal flow */
+   /* z-index: 10; /* Brings it above other content */
+    left: 10;
+    margin-left: 232px;
+    margin-top: 76px;
+    justify-content: center;
+    
+}
+
+.new div{
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+.vid{
+    position: relative;
+    width: 100%;
+    height: 224px;
+    background-color: rgb(255, 255, 255);
+}
+.vid img{
+    border-radius: 10px;
+    width:100%;
+    height: 224px;
+    object-fit: cover;
+}
+.main-section{
+    width: 1519px;
+    height: 810px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: absolute;
+   
+}
+
+.description{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 140px;
+}
+
+
+
+.channel-img{
+   
+    width: 36px;
+    height: 140px;
+}
+.channel-img img{
+    margin-top: 7px;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+     border-radius: 50%;
+}
+.text{
+    padding-left: 8px;
+    padding-top: 8px;
+    width: 333px;
+    height: 126px;
+}
+.three-dots{
+    width: 22px;
+    height: 133px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px; 
+}
+.fa-solid fa-circle{
+    font-size: 8px;
+    margin-top: 2px;
+}
+#inline{
+    padding-top: 10px;
+}
+
+.main-text{
+    margin-top: 4px;
+    font-size: 16px ;
+}
+.second-text p{
+    margin-top: 8px;
+    font-size: 14px;
+
+}
+.time-label{
+    position: absolute;
+}
+
+.text-overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 31px;
+    height: 21px;
+    position: absolute;
+    border-radius: 3px;
+    top: 196px;
+    right: 14px;
+    background-color: black !important;
+    color: white;
+}
+
+.text-overlay span{
+    font-size: 14px;
+}
+
+.vid span{
+    font-family:  Roboto, Arial, sans-serif;
+}

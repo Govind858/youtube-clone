@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Rounded Search Bar</title>
+    <style>
+
+        /* Ensure the page takes up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Flex container with vertical layout */
+.flex-container {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    width: 300px;            /* Fixed width */
+    height: 300px;           /* Fixed height */
+    overflow-y: auto;        /* Enable vertical scrolling if content exceeds */
+    border: 2px solid #ccc;  /* Optional border for visibility */
+    padding: 10px;           /* Padding around the content */
+    box-sizing: border-box;  /* Include padding in the total width/height */
+}
+
+/* Styling for individual items */
+.item {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Hover effect for items */
+.item:hover {
+    background-color: #e0e0e0;
+}
+
+
+.scroll-container {
+  width: 300px;
+  height: 200px;
+  overflow-y: scroll; /* Enables vertical scrolling */
+  border: 1px solid #ccc; /* Optional: for visibility */
+  padding: 10px;
+}
+    side-bar{
+            overflow-y:scroll ;
+    }
+
+        .container{
+            overflow-x: scroll;
+            display: flex;
+            background-color: red;
+            height: 500px;
+            width: 100px;
+            flex-direction: column;
+
+        }
+
+        .container div{
+            height: 100px;
+            width: 90px;
+            background-color: greenyellow;
+
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .field{
+            border: none;
+            background-color: transparent;
+            outline: none ;  
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 25px; /* Rounded corners */
+            outline: none; /* Remove outline */
+            transition: border-color 0.3s; /* Smooth transition */
+        }
+        input[type="text"]:focus {
+            border-color: #007BFF; /* Change border color on focus */
+        }
+        input[type="submit"] {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 25px; /* Rounded corners */
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .search-bar{
+            width: 200px;
+            background-color: #007BFF;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .msn{
+            display: flex;
+            width: 100px;
+            height: 150px;
+            overflow-x: auto;
+            background-color: #007BFF;
+
+        }
+        .player{
+            width: 80;
+            height: 120px;
+            flex-direction: column;
+            background-color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="search-bar">
+    <form action="/search" method="get">
+        <input type="text" name="query" placeholder="Search..." required>
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="search-bar">
+    <form >
+        <input class="field" type="search" placeholder="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </form>
+</div>
+
+
+
+<div class="flex-container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+    <div class="item">Item 10</div>
+    <div class="item">Item 11</div>
+    <div class="item">Item 12</div>
+    <div class="item">Item 13</div>
+</div>
+  
+<div class="msn">
+    <div class="player">Messi</div>
+    <div class="player">Neymer</div>
+    <div class="player">Suaris</div>
+</div>
+</body>
+</html>
