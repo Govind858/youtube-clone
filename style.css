@@ -1,12 +1,15 @@
 .header{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     height: 60px;
     background-color:white;
     align-items: center;
     flex-wrap: wrap;
-
+    position: fixed;
+    z-index: 99;
+   
+    
 } 
 
 /* .header > div{
@@ -116,17 +119,19 @@
 }
 
 .side-bar{
-    float: left;
+    /* float: left; */
     overflow-y: auto;
     scrollbar-width: thin;
    /* margin-top: 30px;*/
     display: flex;
-    width: 204px;
+    width: 200px;
+    height: 100vh;
     margin-left: 10px;
     height: 100vh;
     /* background-color: rgb(117, 117, 117); */
     flex-direction: column;
-    
+    transition: width 0.3s ease;
+    position: fixed;
 }
 
 .side-bar div{
@@ -190,7 +195,7 @@ P{
 }
 
 .horizontal-scrollbar{
-    margin-left: 22px;
+    margin-left: 249px;
     display: flex;
     width: 1255px;
     height: 56px;
@@ -199,6 +204,10 @@ P{
     gap: 10px;
     align-items: center;
     overflow-x: scroll;
+    position: fixed;
+    z-index: 33;
+    margin-top: -4px;
+
 }
 .horizontal-scrollbar div{
     display: flex;
@@ -217,6 +226,7 @@ P{
 }
 
 .button{
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,7 +235,12 @@ P{
     height: 56px;
     background-color: rgb(255, 255, 255);
     font-size: 24px;
+    position: absolute;
+    right: 0;
+    position: fixed;
 }
+
+
 button:hover{
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
@@ -243,28 +258,34 @@ button:hover{
     font-family: Roboto, Arial, sans-serif;
 };
 
-.side-bar, .horizontal-scrollbar {
+ .horizontal-scrollbar {
     float: left;
     overflow: hidden; /* Helps contain floats within these elements */
     width: 100%;
+   
 }
 
-.new {
+.new{
     display: grid;
     grid-template-columns: repeat(3, 399.71px);
     grid-template-rows: repeat(2, 364.84px);
     gap: 10px;
    /* display: flex;*/
-    height: 800px;
-    width: 1300px;
+    /* height: 800px;
+    width: 1300px; */
+    width: 100vh;
+    margin-left: 35px;
+    margin-top: 13px
     background-color: rgb(255, 255, 255);
     clear: both; /* Ensures it appears below the floated elements */
     position: absolute; /* Ensures it sits on the normal flow */
    /* z-index: 10; /* Brings it above other content */
     left: 10;
-    margin-left: 232px;
-    margin-top: 76px;
+    margin-left: 518px;
+    margin-top: 120px;
     justify-content: center;
+  
+    
     
 }
 
@@ -287,6 +308,7 @@ button:hover{
     object-fit: cover;
 }
 .main-section{
+    margin-top: 64px;
     width: 1519px;
     height: 810px;
     background-color: rgb(255, 255, 255);
@@ -371,4 +393,42 @@ button:hover{
 
 .vid span{
     font-family:  Roboto, Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+    .header {
+        width: 100vw !important;
+        background-color: blue !important;
+        flex-direction: row !important;
+    }
+}
+
+.main-section{
+    display:flex;
+}
+
+
+ .side-bar{
+ }
+
+ .menu-toggle {
+    /* display: none; */
+}
+
+.menu-toggle:checked~.side-bar{
+    width: 60px;
+}
+
+.menu-toggle:checked ~ .side-bar {
+    transform: translateX(-140px);
+}
+
+.main-container{
+    width: 100%;
+}
+.toggle{
+    width:30px;
+    height: 40px;
+    background-color: blueviolet;
+    z-index: 40;    
 }

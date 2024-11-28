@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Sidebar</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hide the sidebar */
+        #menuToggle:checked ~ .sidebar {
+            transform: translateX(-100%);
+        }
+
+        /* Main content */
+        .content {
+            margin-left: 200px; /* Adjust based on sidebar width */
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+
+        /* Adjust content when sidebar is hidden */
+        #menuToggle:checked ~ .sidebar + .content {
+            margin-left: 0;
+        }
+
+        /* Menu button styles */
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        /* Hidden checkbox */
+        #menuToggle {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hidden checkbox to control sidebar -->
+    <input type="checkbox" id="menuToggle">
+
+    <!-- Menu button -->
+    <label for="menuToggle" class="menu-button">☰ Menu</label>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <p>Some content here...</p>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <h1>Main Content</h1>
+        <p>Click the menu button to toggle the sidebar.</p>
+    </div>
+</body>
+</html>

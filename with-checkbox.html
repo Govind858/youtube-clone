@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform Sidebar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu-bar {
+      display: flex;
+    }
+
+    .toggle-btn {
+      padding: 10px;
+      background: #202020;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .sidebar {
+      width: 200px;
+      height: 100vh;
+      background: #202020;
+      color: white;
+      position: relative;
+      transition: transform 0.3s ease;
+      /* Smooth animation */
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px;
+      border-bottom: 1px solid #333;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* Hide the sidebar (translate it left) */
+    .menu-toggle:checked~.sidebar {
+      transform: translateX(-140px);
+    }
+  </style>
+</head>
+
+<body>
+  <label for="menu-toggle" class="toggle-btn">☰</label>
+
+
+  <!-- Hidden checkbox for toggle -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li>Home</li>
+      <li>Trending</li>
+      <li>Subscriptions</li>
+      <li>Library</li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
